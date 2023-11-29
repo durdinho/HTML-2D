@@ -1,0 +1,17 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Esta função será executada após o carregamento do DOM
+
+    // Seleciona todas as seções dentro da tag main
+    const sections = document.querySelectorAll('main section');
+
+    // Adiciona um evento de clique a cada seção
+    sections.forEach(section => {
+        section.addEventListener('click', function () {
+            // Obtém o título da joia na seção clicada
+            const joiaNome = section.querySelector('h2').textContent;
+
+            // Exibe um alerta com o nome da joia
+            alert(Você clicou em: ${joiaNome});
+        });
+    });
+});
